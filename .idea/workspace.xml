@@ -5,10 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4dfcb24-827e-4886-982a-b1891aa6bc44" name="Changes" comment="Hello World Git Test">
-      <change afterPath="$PROJECT_DIR$/src/One_FindString/convertUpperCaseLetter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ReviewTest/findStringReview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCode/AddTwoNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCode/ComparableNComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCode/ContainsDuplicate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCode/LinkedAddTwoNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCode/LinkedListCycle2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCode/LinkedListCycle_UseWithFloyd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCode/LinkedListCycle_UseWithHash.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCode/MeetingRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCode/MeetingRoomUseByForEach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCode/RemoveDuplicatesFromSortedList2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCode/ReturnNodeAddTwoNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCode/ValidAnagram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCodeReivew/LinkedListReview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCodeReivew/MeetingRoomReview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCodeReivew/MoveZeroesReview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCodeReivew/RemoveDuplicatesFromSortedListReview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/One_FindString/CharDistance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/One_FindString/ExtractionOnlyNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/One_FindString/MinimumDistance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/One_FindString/Palindrome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/One_FindString/ReplaceUsed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/One_FindString/StringPress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ReviewTest/CharDistanceReview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ReviewTest/ReplaceUsedReview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ReviewTest/palindromeReview.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/One_FindString/findString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/One_FindString/findString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/One_FindString/DeduplicateChar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/One_FindString/DeduplicateChar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/One_FindString/SubStringAndIndexOf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/One_FindString/SubStringAndIndexOf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/One_FindString/ToCharArrayUsed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/One_FindString/ToCharArrayUsed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/One_FindString/UsingStringBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/One_FindString/UsingStringBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/One_FindString/convertUpperCaseLetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/One_FindString/convertUpperCaseLetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReviewTest/DuplicateCharReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReviewTest/DuplicateCharReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReviewTest/SubStringAndIndexOfReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReviewTest/SubStringAndIndexOfReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReviewTest/ToCharArrayUsedReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReviewTest/ToCharArrayUsedReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReviewTest/UsingStringBuilderReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReviewTest/UsingStringBuilderReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReviewTest/convertUpperCaseLetterReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReviewTest/convertUpperCaseLetterReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReviewTest/findStringReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReviewTest/findStringReview.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,22 +78,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/CodingTest&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.convertUpperCaseLetter">
-    <configuration name="convertUpperCaseLetter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="One_FindString.convertUpperCaseLetter" />
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="One_FindString" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ContainsDuplicate">
+    <configuration name="AddTwoNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LeetCode.AddTwoNumbers" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="One_FindString.*" />
+          <option name="PATTERN" value="LeetCode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -68,12 +108,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="findString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="One_FindString.findString" />
+    <configuration name="ContainsDuplicate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LeetCode.ContainsDuplicate" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="One_FindString.*" />
+          <option name="PATTERN" value="LeetCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedListCycle2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LeetCode.LinkedListCycle2" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LeetCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RemoveDuplicatesFromSortedList2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LeetCode.RemoveDuplicatesFromSortedList2" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LeetCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReturnNodeAddTwoNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LeetCode.ReturnNodeAddTwoNumbers" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LeetCode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -83,8 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.convertUpperCaseLetter" />
-        <item itemvalue="Application.findString" />
+        <item itemvalue="Application.ContainsDuplicate" />
+        <item itemvalue="Application.ReturnNodeAddTwoNumbers" />
+        <item itemvalue="Application.AddTwoNumbers" />
+        <item itemvalue="Application.RemoveDuplicatesFromSortedList2" />
+        <item itemvalue="Application.LinkedListCycle2" />
       </list>
     </recent_temporary>
   </component>
@@ -140,5 +222,149 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hello World Git Test" />
     <option name="LAST_COMMIT_MESSAGE" value="Hello World Git Test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/One_FindString/MinimumDistance.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/LinkedListCycle_UseWithHash.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/One_FindString/CharDistance.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/One_FindString/CharDistance.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCodeReivew/LinkedListReview.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCodeReivew/LinkedListReview.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCodeReivew/LinkedListReview.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCodeReivew/LinkedListReview.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCodeReivew/LinkedListReview.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCodeReivew/MoveZeroesReview.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCodeReivew/RemoveDuplicatesFromSortedListReview.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCodeReivew/RemoveDuplicatesFromSortedListReview.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCodeReivew/RemoveDuplicatesFromSortedListReview.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ReviewTest/CharDistanceReview.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ReviewTest/CharDistanceReview.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/One_FindString/StringPress.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/LinkedListCycle2.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/LinkedListCycle2.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/RemoveDuplicatesFromSortedList2.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/AddTwoNumbers.java</url>
+          <line>29</line>
+          <properties>
+            <option name="lambda-ordinal" value="0" />
+          </properties>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/AddTwoNumbers.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/AddTwoNumbers.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/AddTwoNumbers.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/AddTwoNumbers.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/ReturnNodeAddTwoNumbers.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/ReturnNodeAddTwoNumbers.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="LeetCodeReivew.RemoveDuplicatesFromSortedListReview$Node" memberName="next" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

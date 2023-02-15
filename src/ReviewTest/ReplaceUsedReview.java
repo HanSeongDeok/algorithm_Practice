@@ -1,6 +1,9 @@
 package ReviewTest;
 
-public class DuplicateCharReview {
+/**
+ *
+ */
+public class ReplaceUsedReview {
     public static void main(String[] args) {
 
     }

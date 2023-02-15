@@ -6,7 +6,7 @@ public class convertUpperCaseLetter {
     /**
      * @implNote ASCII NUMBER = 대문자 : 65~90, 소문자 : 97~122
      * @param str
-     * @return
+     * @return answer
      */
     public static String solution(String str){
         String answer = "";

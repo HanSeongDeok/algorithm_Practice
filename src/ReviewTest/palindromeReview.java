@@ -1,6 +1,6 @@
 package ReviewTest;
 
-public class DuplicateCharReview {
+public class palindromeReview {
     public static void main(String[] args) {
 
     }

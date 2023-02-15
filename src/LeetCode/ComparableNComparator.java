@@ -1,6 +1,6 @@
-package ReviewTest;
+package LeetCode;
 
-public class DuplicateCharReview {
+public class ComparableNComparator {
     public static void main(String[] args) {
 
     }

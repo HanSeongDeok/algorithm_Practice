@@ -3,9 +3,8 @@ package ReviewTest;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
-public class SubStringAndIndexOf {
+public class SubStringAndIndexOfReview {
     public static void solution(String str){
         String strArr[] = str.split(" ");
         String answer = "";
