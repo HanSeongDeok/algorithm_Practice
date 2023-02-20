@@ -1,15 +1,36 @@
 package LeetCode;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class ValidAnagram {
     public static boolean solution(String s, String t){
-        Set set = new HashSet();
-        for(int i=0; i < s.length(); i++) set.add(s.charAt(i));
-        for(int i=0; i < t.length(); i++){
-            if(!set.contains(t.charAt(i)) && s.length()!=t.length()){
+        if(s.length() != t.length()) return false;
+        Map<Character, Integer> map = new HashMap();
+        for(int i=0; i<s.length(); i++){
+            map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0)+1);
+        }
+        for(int i=0; i<t.length(); i++){
+            map.put(t.charAt(i), map.getOrDefault(t.charAt(i), 0)-1);
+        }
+        for(Integer check : map.values()){
+            if(check != 0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static boolean solution3(String s, String t){
+        if(s.length()!= t.length()) return false;
+        Map map = new HashMap();
+        for(int i=0; i < s.length(); i++){
+            map.put(s.charAt(i), (Integer)map.getOrDefault(s.charAt(i), 0)+1);
+        }
+        for(int i =0; i<t.length(); i++){
+            map.put(t.charAt(i), (Integer)map.getOrDefault(t.charAt(i), -1)-1);
+        }
+        for (int i=0; i<map.size(); i++){
+            if((Integer) map.get(s.charAt(i))!=0){
                 return false;
             }
         }
