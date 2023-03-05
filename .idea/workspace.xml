@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4dfcb24-827e-4886-982a-b1891aa6bc44" name="Changes" comment="GroupAnagrams Algorithm Solve">
-      <change afterPath="$PROJECT_DIR$/src/LeetCode/ProductOfArrayExceptSelf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LeetCode/TopKFrequentElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LeetCodeReivew/GroupAnagramsReview.java" afterDir="false" />
+    <list default="true" id="a4dfcb24-827e-4886-982a-b1891aa6bc44" name="Changes" comment="Product of Array Except Self Solve">
+      <change afterPath="$PROJECT_DIR$/src/BaekJoon/Fast_A_Plus_B_15552.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BaekJoon/Fast_A_Plus_B_15552_Review.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCode/ValidSudoku.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCodeReivew/TopKFrequentElementsReview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCodeReivew/productExceptSelfReview.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LeetCode/ProductOfArrayExceptSelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode/ProductOfArrayExceptSelf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LeetCodeReivew/GroupAnagramsReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCodeReivew/GroupAnagramsReview.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,39 +65,13 @@
       <recent name="One_FindString" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ProductOfArrayExceptSelf">
-    <configuration name="ContainsDuplicate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LeetCode.ContainsDuplicate" />
+  <component name="RunManager" selected="Application.ValidSudoku">
+    <configuration name="GroupAnagramsReview" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LeetCodeReivew.GroupAnagramsReview" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="LeetCode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GroupAnagrams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LeetCode.GroupAnagrams" />
-      <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="LeetCode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NotGoalInPlayer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Programmers.NotGoalInPlayer" />
-      <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Programmers.*" />
+          <option name="PATTERN" value="LeetCodeReivew.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,8 +92,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TopKFrequentElements" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LeetCode.TopKFrequentElements" />
+    <configuration name="TopKFrequentElementsReview" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LeetCodeReivew.TopKFrequentElementsReview" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LeetCodeReivew.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidSudoku" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LeetCode.ValidSudoku" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -127,13 +118,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="productExceptSelfReview" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LeetCodeReivew.productExceptSelfReview" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LeetCodeReivew.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ValidSudoku" />
         <item itemvalue="Application.ProductOfArrayExceptSelf" />
-        <item itemvalue="Application.TopKFrequentElements" />
-        <item itemvalue="Application.GroupAnagrams" />
-        <item itemvalue="Application.NotGoalInPlayer" />
-        <item itemvalue="Application.ContainsDuplicate" />
+        <item itemvalue="Application.productExceptSelfReview" />
+        <item itemvalue="Application.GroupAnagramsReview" />
+        <item itemvalue="Application.TopKFrequentElementsReview" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676901598254</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Product of Array Except Self Solve">
+      <created>1677853533354</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677853533354</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,7 +215,8 @@
     <MESSAGE value="Hello World Git Test" />
     <MESSAGE value="알고리즘 최신화" />
     <MESSAGE value="GroupAnagrams Algorithm Solve" />
-    <option name="LAST_COMMIT_MESSAGE" value="GroupAnagrams Algorithm Solve" />
+    <MESSAGE value="Product of Array Except Self Solve" />
+    <option name="LAST_COMMIT_MESSAGE" value="Product of Array Except Self Solve" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -356,6 +368,21 @@
           <url>file://$PROJECT_DIR$/src/LeetCode/TopKFrequentElements.java</url>
           <line>20</line>
           <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCodeReivew/TopKFrequentElementsReview.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCodeReivew/productExceptSelfReview.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/ValidSudoku.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

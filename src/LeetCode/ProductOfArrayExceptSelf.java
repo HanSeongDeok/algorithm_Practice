@@ -23,6 +23,9 @@ public class ProductOfArrayExceptSelf {
     public static void main(String[] args) {
         int nums[] = {1,2,3,4};
         //int nums[] = {-1,1,0,-3,3};
+        long startTime = System.nanoTime();
         System.out.println(Arrays.toString(solution(nums)));
+        long endTime = System.nanoTime();
+        System.out.println((endTime - startTime)/1000);
     }
 }
