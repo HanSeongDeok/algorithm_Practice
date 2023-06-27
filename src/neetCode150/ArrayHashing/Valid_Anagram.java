@@ -11,6 +11,11 @@ public class Valid_Anagram {
         String [] ss = s.split("");
         String [] ts = t.split("");
 
+        Map map1 = new HashMap();
+        Map map2 = new HashMap();
+
+
+
         return valid;
     }
 
@@ -23,10 +28,10 @@ public class Valid_Anagram {
         count = 0;
         Arrays.stream(ts).sorted().forEach(s1 -> ts[count++] = s1);
 
-        return valid = String.valueOf(ss).equals(String.valueOf(ts)) ? true : false;
+        return valid = Arrays.toString(ss).equals(Arrays.toString(ts)) ? true : false;
     }
 
     public static void main(String[] args) {
-        System.out.println(solution("rat", "car"));
+        System.out.println(simple_solution("anagram", "nagaram"));
     }
 }
