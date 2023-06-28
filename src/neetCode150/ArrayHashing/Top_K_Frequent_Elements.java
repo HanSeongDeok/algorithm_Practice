@@ -3,9 +3,8 @@ package neetCode150.ArrayHashing;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.IntStream;
 
-public class TopKFrequentElements {
+public class Top_K_Frequent_Elements {
     public int[] topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
         int count = 0;
