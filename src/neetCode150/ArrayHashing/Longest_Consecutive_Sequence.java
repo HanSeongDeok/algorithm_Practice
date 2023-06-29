@@ -12,5 +12,6 @@ public class Longest_Consecutive_Sequence {
         if (nums.length == 0)
             return 0;
 
+        return 0;
     }
 }
