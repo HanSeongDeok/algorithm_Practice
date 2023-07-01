@@ -52,7 +52,6 @@ public class Valid_Sudoku {
     public boolean isValidSudoku2(char[][] board) {
 
 
-
         return false;
     }
 }
