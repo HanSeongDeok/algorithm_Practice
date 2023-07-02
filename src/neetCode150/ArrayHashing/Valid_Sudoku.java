@@ -48,11 +48,39 @@ public class Valid_Sudoku {
 
         return isValidRow & isValidColumn & isValidBlock;
     }
-
     public boolean isValidSudoku2(char[][] board) {
+        final int rowLen = board[0].length;
+        final int colLen = board.length;
+        final int boxLen = 9;
 
+        // check for row
+        boolean r = IntStream.range(0, rowLen).allMatch(i -> {
+            Set<Character> set = new HashSet();
+            return IntStream.range(0, rowLen).filter(j -> board[i][j] != '.')
+                    .mapToObj(j -> board[i][j])
+                    .allMatch(set::add);
+        });
 
-        return false;
+        // check for column
+        boolean c = IntStream.range(0, colLen).allMatch(i -> {
+            Set<Character> set = new HashSet<>();
+            return IntStream.range(0, colLen).filter(j -> board[j][i] != '.')
+                    .mapToObj(j -> board[j][i])
+                    .allMatch(set::add);
+        });
+
+        // check for box
+        boolean b = IntStream.range(0, boxLen).allMatch(i -> {
+            Set<Character> set = new HashSet();
+            int rowIndex = (i%3)*3;
+            int colIndex = (i/3)*3;
+            return IntStream.range(0, boxLen).allMatch(j -> {
+                char temp = board[colIndex + j / 3][rowIndex + j % 3];
+                return temp == '.' || set.add(temp);
+            });
+        });
+
+        return r && c && b;
     }
 }
 
