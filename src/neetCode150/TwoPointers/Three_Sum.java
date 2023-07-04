@@ -26,7 +26,6 @@ public class Three_Sum {
         int[] sortedNums = Arrays.stream(nums).sorted().toArray();
         List<Integer> temp = new ArrayList<>();
 
-
         return  IntStream.range(0,nums.length).mapToObj(index -> {
             int j = index + 1;
             int k = nums.length - 1;
@@ -47,6 +46,25 @@ public class Three_Sum {
             }).collect(Collectors.toList());
         }).flatMap(lists -> lists.stream()).collect(Collectors.toList());
     }
+
+    public static List<List<Integer>> threeSum3(int[] nums) {
+        Arrays.sort(nums);
+        Set<List<Integer>> set = new HashSet<>();
+        IntStream.range(0, nums.length).forEach(index -> {
+          int i = index + 1;
+          int j = nums.length - 1;
+          while (i < j) {
+              if (nums[index] + nums[i] + nums[j] == 0) {
+                  set.add(Arrays.asList(nums[index], nums[i], nums[j]));
+                  i++;
+                  j--;
+              } else if (nums[index] + nums[i] + nums[j] < 0) i++;
+              else j--;
+          }
+      });
+      return new ArrayList<>(set);
+    }
+
     public static void main(String[] args) {
         List<List<Integer>>test = threeSum(new int[]{-1,0,1,2,-1,-4});
     }
