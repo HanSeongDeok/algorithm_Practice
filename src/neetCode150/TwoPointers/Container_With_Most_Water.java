@@ -22,7 +22,7 @@ public class Container_With_Most_Water {
         int i = 0;
         int j = height.length - 1;
         while (i < j) {
-            int heightVar = (height[i] > height[j] ? height[j] : height[i]);
+            int heightVar = (Math.min(height[i], height[j]));
             int ta = heightVar*(j - i);
             if (ta > area) area = ta;
             while (height[i] <= heightVar && i < j) i++;
