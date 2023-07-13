@@ -1,5 +1,10 @@
 package neetCode150.slidingwindow;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 public class Minimum_Window_Substring {
     public String minWindow(String s, String t) {
             if (s == null || t == null || s.length() ==0 || t.length() == 0 ||
@@ -8,7 +13,7 @@ public class Minimum_Window_Substring {
             }
             int[] map = new int[128];
             int count = t.length();
-            int start = 0, end = 0, minLen = Integer.MAX_VALUE,startIndex =0;
+            int start = 0, end = 0, minLen = Integer.MAX_VALUE, startIndex =0;
             for (char c :t.toCharArray()) {
                 map[c]++;
             }
@@ -25,10 +30,33 @@ public class Minimum_Window_Substring {
                     if (map[chS[start++]]++ == 0) {
                         count++;
                     }
+
                 }
             }
-
             return minLen == Integer.MAX_VALUE? new String():
                     new String(chS,startIndex,minLen);
         }
+
+    public String minWindow2(String s, String t) {
+        if (s == null || t==null || s.isEmpty() || t.isEmpty() || t.length() > s.length() ) return "";
+        char [] sArr = s.toCharArray();
+        int [] tArr = new int[128];
+        IntStream.range(0,t.length()).forEach(i -> tArr[t.charAt(i)]++);
+        int start=0, end=0, count=t.length(), minWindow=Integer.MAX_VALUE, startIndex = 0;
+        while (end < s.length()) {
+            if (tArr[sArr[end++]]-- > 0) count--;
+            while (count == 0) {
+                if (end - start < minWindow){
+                    startIndex = start;
+                    minWindow = end - start;
+                }
+                if (tArr[sArr[start++]]++ == 0) count++;
+            }
+        }
+        return minWindow==Integer.MAX_VALUE ? "" : s.substring(startIndex, startIndex+minWindow);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Minimum_Window_Substring().minWindow2("ADOBECODEBANC","ABC"));
+    }
 }
