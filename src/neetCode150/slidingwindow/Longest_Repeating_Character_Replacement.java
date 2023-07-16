@@ -1,8 +1,11 @@
 package neetCode150.slidingwindow;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Longest_Repeating_Character_Replacement {
     // Time Complexity :  O(n)
@@ -37,7 +40,42 @@ public class Longest_Repeating_Character_Replacement {
                 }).max(Integer::compareTo).get();
     }
 
+    private Integer getMaxWindow2(String s, int k) {
+        if (s == null || s.isEmpty()) return 0;
+        Map<Character, Integer> map = new HashMap<>();
+        int max = 0, windowMax = 0, right = 0, left = 0;
+
+        for (char c : s.toCharArray()) {
+            if (!map.containsKey(c)) map.put(c, 0);
+            map.put(c, map.get(c)+1);
+            max = Math.max(map.get(c), max);
+
+            if (right - left + 1 - max > k) map.put(s.charAt(left), map.get(s.charAt(left++))-1);
+            windowMax = Math.max(windowMax, right++ - left +1);
+        }
+        return windowMax;
+    }
+
+    /**
+     * WOW BEST!!!
+     * @param s
+     * @param k
+     * @return
+     */
+    public int characterReplacement4(String s, int k) {
+        byte[] array = s.getBytes();
+        //System.out.print(Arrays.toString(array));
+        for (int i = 0; i < array.length; i++) array[i] -= 'A';
+        int[] count = new int[26];
+        int start = 0;
+        for (int end = 0, maxCount = 0; end < array.length; end++) {
+            maxCount = Math.max(maxCount, ++count[array[end]]);
+            while (maxCount + k < end - start + 1) count[array[start++]]--;
+        }
+        return array.length - start;
+    }
+
     public static void main(String[] args) {
-        new Longest_Repeating_Character_Replacement().characterReplacement2("ABAB", 2);
+        System.out.println(new Longest_Repeating_Character_Replacement().getMaxWindow2("AABABBA", 1));
     }
 }

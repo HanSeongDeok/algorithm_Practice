@@ -1,7 +1,9 @@
 package neetCode150.slidingwindow;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -56,7 +58,26 @@ public class Minimum_Window_Substring {
         return minWindow==Integer.MAX_VALUE ? "" : s.substring(startIndex, startIndex+minWindow);
     }
 
+    public String minWindow3(String s, String t) {
+        if (s == null || t == null || s.isEmpty() || t.isEmpty() || t.length() > s.length()) return "";
+        int count = t.length(), end = 0, start = 0, minWindow = Integer.MAX_VALUE, startIndex = 0;
+        char[] sArr = s.toCharArray();
+        int [] tArr = new int[128];
+        IntStream.range(0, t.length()).forEach(i -> tArr[t.charAt(i)]++);
+        while (end < s.length()) {
+            if (tArr[sArr[end++]]-- > 0) count--;
+            while (0 == count) {
+                if (end - start < minWindow) {
+                    startIndex = start;
+                    minWindow = end - start;
+                }
+                count = (tArr[sArr[start++]]++ == 0) ? count+1 : count;
+            }
+        }
+        return minWindow == Integer.MAX_VALUE ? "" : new String(s.toCharArray(), startIndex, minWindow);
+    }
+
     public static void main(String[] args) {
-        System.out.println(new Minimum_Window_Substring().minWindow2("ADOBECODEBANC","ABC"));
+        System.out.println(new Minimum_Window_Substring().minWindow3("ADOBECODEBANC","ABC"));
     }
 }
