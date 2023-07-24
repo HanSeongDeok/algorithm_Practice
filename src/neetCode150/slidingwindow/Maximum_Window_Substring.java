@@ -1,7 +1,9 @@
 package neetCode150.slidingwindow;
 
 import java.util.ArrayDeque;
+import java.util.Arrays;
 import java.util.Deque;
+import java.util.stream.IntStream;
 
 public class Maximum_Window_Substring {
     public static int[] maxSlidingWindow(int[] nums, int k) {
@@ -31,7 +33,22 @@ public class Maximum_Window_Substring {
         return r;
     }
 
+    public static int[] maxSlidingWindow2(int[] nums, int k) {
+        if (nums == null || k <= 0) return new int[0];
+        int[] r = new int[nums.length-k+1];
+        int rIndex = 0;
+        // store index
+        Deque<Integer> q = new ArrayDeque<>();
+        for (int index = 0; index < nums.length; index++) {
+            while (!q.isEmpty() && q.peek() <= index - k) q.poll();
+            while (!q.isEmpty() && nums[q.peekLast()] < nums[index]) q.pollLast();
+            q.offer(index);
+            if (index > k - 2) r[rIndex++] = nums[q.peek()];
+        }
+        return r;
+    }
+
     public static void main(String[] args) {
-        maxSlidingWindow(new int[] {1,3,-1,-3,5,3,6,7}, 3);
+        System.out.println(Arrays.toString(maxSlidingWindow2(new int[]{1, 3, -1, -3, 5, 3, 6, 7}, 3)));
     }
 }
