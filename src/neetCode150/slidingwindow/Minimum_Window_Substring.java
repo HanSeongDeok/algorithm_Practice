@@ -77,7 +77,28 @@ public class Minimum_Window_Substring {
         return minWindow == Integer.MAX_VALUE ? "" : new String(s.toCharArray(), startIndex, minWindow);
     }
 
+    public String minWindow4(String s, String t) {
+        if (s==null || t==null || s.isEmpty() || t.isEmpty() || t.length() > s.length()) return "";
+
+        char[]sArr = s.toCharArray();
+        int[]tArr = new int[128]; //ASCII CODE
+        int end = 0, count = t.length(), startIndex = 0, winMax = Integer.MAX_VALUE, start = 0;
+        for (char c : t.toCharArray()) tArr[c]++;
+
+        while (end < s.length()) {
+            if (tArr[sArr[end++]]-- > 0) count--;
+            while (count == 0) {
+                if (end - start < winMax) {
+                    startIndex = start;
+                    winMax = end - start;
+                }
+                count = (tArr[sArr[start++]]++ != 0) ? count : count+1;
+            }
+        }
+        return winMax == Integer.MAX_VALUE ? "" : s.substring(startIndex, startIndex + winMax);
+    }
+
     public static void main(String[] args) {
-        System.out.println(new Minimum_Window_Substring().minWindow3("ADOBECODEBANC","ABC"));
+        System.out.println(new Minimum_Window_Substring().minWindow4("AAABCD","ABC"));
     }
 }

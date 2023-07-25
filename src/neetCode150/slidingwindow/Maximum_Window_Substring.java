@@ -48,7 +48,21 @@ public class Maximum_Window_Substring {
         return r;
     }
 
+    public static int[] maxSlidingWindow3(int[] nums, int k) {
+        if (k <= 0 || nums == null) return new int[0];
+        int winArr[] = new int[nums.length - k + 1];
+        int winArrIndex = 0;
+        Deque<Integer> deque = new ArrayDeque<>();
+        for (int i=0; i<nums.length; i++) {
+            if (!deque.isEmpty() && i - deque.peek() >= k) deque.poll();
+            while (!deque.isEmpty() && nums[deque.peekLast()] < nums[i]) deque.pollLast();
+            deque.offer(i);
+            if (i > k-2) winArr[winArrIndex++] = nums[deque.peek()];
+        }
+        return winArr;
+    }
+
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(maxSlidingWindow2(new int[]{1, 3, -1, -3, 5, 3, 6, 7}, 3)));
+        System.out.println(Arrays.toString(maxSlidingWindow3(new int[]{1, 3, -1, -3, 5, 3, 6, 7}, 3)));
     }
 }
