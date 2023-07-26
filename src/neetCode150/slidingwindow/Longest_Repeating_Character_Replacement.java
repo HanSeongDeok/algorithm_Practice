@@ -75,7 +75,31 @@ public class Longest_Repeating_Character_Replacement {
         return array.length - start;
     }
 
+    public int characterReplacement5(String s, int k) {
+        Map<Character, Integer> map = new HashMap();
+        int max = 0, winMax = 0, endIndex =0, startIndex = 0;
+        for (char c : s.toCharArray()) {
+            if (!map.containsKey(c)) map.put(c, 0);
+            map.put(c, map.get(c) + 1);
+            max = Math.max(max, map.get(c));
+            if (endIndex - startIndex >= max + k) map.put(s.charAt(startIndex), map.get(s.charAt(startIndex++))-1);
+            winMax = Math.max(winMax, ++endIndex - startIndex);
+        }
+        return winMax;
+    }
+
+    public int characterReplacement6(String s, int k) {
+        int []sArr = new int[128];
+        int max = 0, winMax = 0, startIndex = 0, endIndex = 0;
+        for (char c : s.toCharArray()) {
+            max = Math.max(max, ++sArr[c]);
+            if (endIndex - startIndex >= max + k) sArr[s.charAt(startIndex++)]--;
+            winMax = Math.max(winMax, ++endIndex-startIndex);
+        }
+        return winMax;
+    }
+
     public static void main(String[] args) {
-        System.out.println(new Longest_Repeating_Character_Replacement().getMaxWindow2("AABABBA", 1));
+        System.out.println(new Longest_Repeating_Character_Replacement().characterReplacement6("AABABBA", 1));
     }
 }

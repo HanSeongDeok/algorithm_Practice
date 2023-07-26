@@ -30,7 +30,22 @@ public class Longest_Substring_NoRepeat_Char {
         return windowMax;
     }
 
+    public static int lengthOfLongestSubstring3(String s) {
+        if (s == null || s.isEmpty()) return 0;
+        int startIndex = 0, endIndex = 0, winMax = 0;
+        Set<Character> set = new HashSet<>();
+        while (endIndex < s.length()) {
+            if (set.add(s.charAt(endIndex++))) winMax = Math.max(winMax, set.size());
+            else {
+                set.remove(s.charAt(startIndex++));
+                --endIndex;
+            }
+        }
+        return winMax;
+    }
+
     public static void main(String[] args) {
         System.out.println(lengthOfLongestSubstring2("pwwkew"));
+        System.out.println(lengthOfLongestSubstring3("pwwkew"));
     }
 }
