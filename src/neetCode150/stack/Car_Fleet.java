@@ -22,7 +22,6 @@ public class Car_Fleet {
         return res;
     }
 
-
     public int carFleet2(int target, int[] position, int[] speed) {
         double[] times = new double[target];
         for (int i=0; i<position.length; i++) {
