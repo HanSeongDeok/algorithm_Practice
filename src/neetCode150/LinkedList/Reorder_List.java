@@ -33,7 +33,6 @@ public class Reorder_List {
     }
     private ListNode reverse(ListNode head) {
         ListNode prev = null;
-
         while(head != null) {
             ListNode tmp = head.next;
             head.next = prev;
@@ -42,6 +41,32 @@ public class Reorder_List {
         }
         return prev;
     }
+
+    public void reorderList2(ListNode head) {
+        if(head == null || head.next == null) return;
+
+        ListNode slow = head, fast = head;
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        ListNode mid = slow.next;
+        slow.next = null;
+
+        mid = reverse(mid);
+
+        while(mid != null) {
+            ListNode tmp1 = head.next;
+            ListNode tmp2 = mid.next;
+
+            head.next = mid;
+            mid.next = tmp1;
+
+            head = tmp1;
+            mid = tmp2;
+        }
+    }
+
     public static void main(String[] args) {
         int[] heads = {1,2,3,4,5};
         ListNode listNode = new ListNode(heads[0]);
