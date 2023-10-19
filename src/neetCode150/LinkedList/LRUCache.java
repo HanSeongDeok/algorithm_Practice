@@ -115,7 +115,6 @@ class LinkedNodeList{
     NodeTmp getTail(){
         return dummyTail.prev;
     }
-
 }
 
 class NodeTmp{
