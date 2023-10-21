@@ -12,6 +12,19 @@ class TempRandomNode {
         this.next = null;
         this.random = null;
     }
+    public String toString(int size, TempRandomNode node){
+        int index = 0;
+        StringBuilder sb = new StringBuilder();
+        while (size > index) {
+            sb.append("next: " + val + "\n");
+            if (node.random == null)  sb.append("random: " + -1 + "\n");
+            else sb.append("random: " + node.random.val + "\n");
+            sb.append("---------------------------\n");
+            node = node.next;
+            index++;
+        }
+        return sb.toString();
+    }
 }
 public class CopyRandomList {
     public TempRandomNode copyRandomList(TempRandomNode head){
@@ -42,18 +55,35 @@ public class CopyRandomList {
         TempRandomNode case1 = new TempRandomNode(nextValues[0]);
         TempRandomNode temp = new TempRandomNode(nextValues[1]);
         case1.next = temp;
+
         for (int i = 2; i < nextValues.length; i++) {
             TempRandomNode tempNextNode = new TempRandomNode(nextValues[i]);
             temp.next = tempNextNode;
             temp = temp.next;
         }
 
+        TempRandomNode headCase1 = case1;
         for (int i = 0; i < randomValues.length; i++) {
-            new CopyRandomList().createRandomNode(i, case1);
+            case1 = new CopyRandomList().createRandomNode(randomValues[i], case1, headCase1);
         }
-    }
-    public TempRandomNode createRandomNode(int index, TempRandomNode case1){
+        System.out.println(headCase1.toString(nextValues.length, headCase1));
+        System.out.println("---------------------------");
 
-        return null;
+        TempRandomNode deeplyCopyHeadCase1 = new CopyRandomList().copyRandomList(headCase1);
+        System.out.println(deeplyCopyHeadCase1.toString(nextValues.length, deeplyCopyHeadCase1));
+    }
+    public TempRandomNode createRandomNode(int index, TempRandomNode case1, TempRandomNode headCase1){
+        int i = 0;
+        TempRandomNode moveNode = headCase1;
+        if (index == -1) {
+            case1.random = null;
+            return case1.next;
+        }
+        while (index > i) {
+            moveNode = moveNode.next;
+            i++;
+        }
+        case1.random = moveNode;
+        return case1.next;
     }
 }
