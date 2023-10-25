@@ -33,7 +33,7 @@ public class ReorderList {
         p1=head;
         p2=preMiddle.next;
         while(p1!=preMiddle){
-            preMiddle.next = preMiddle.next.next;
+            preMiddle.next = p2.next;
             p2.next = p1.next;
             p1.next = p2;
             p1 = p1.next.next;

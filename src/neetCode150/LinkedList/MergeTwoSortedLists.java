@@ -13,7 +13,7 @@ public class MergeTwoSortedLists {
         ListNode head = mergeNode;
         while (list1 != null || list2 != null) {
             boolean bothNotNull = list1 != null && list2 != null;
-            if (list1 == null && list2 != null) {
+            if (list1 == null) {
                 mergeNode.next = list2;
                 list2 = list2.next;
             }
@@ -26,7 +26,7 @@ public class MergeTwoSortedLists {
                 mergeNode.next = moveNode;
                 list2 = list2.next;
             }
-            else if (bothNotNull && list1.val < list2.val) {
+            else if (bothNotNull) {
                 ListNode moveNode = new ListNode(list1.val);
                 mergeNode.next = moveNode;
                 list1 = list1.next;
