@@ -29,14 +29,39 @@ public class ChangeWord {
     }
     private boolean validChanged(String[] words, boolean[] changed, String changeNext, int i) {
         int count = 0;
-        for (int j = 0; j < words[i].length(); j++) {
-            if (changeNext.charAt(j) == words[i].charAt(j)) count++;
-            if (count > 1) changed[i] = true;
+        return isValidChange(words[i], changeNext, changed, i);
+    }
+
+    public int solution2(String begin, String target, String[] words) {
+        Queue<String> queue = new LinkedList<>();
+        boolean[] checked = new boolean[words.length];
+        queue.offer(begin);
+        int count = 0;
+        return bfsCount(target, words, queue, checked, count);
+    }
+    private int bfsCount(String target, String[] words, Queue<String> queue, boolean[] checked, int count) {
+        if (queue.isEmpty()) return 0;
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                if (target.equals(queue.peek())) return count;
+                setChangedQueue(words, queue, checked, queue.poll());
+            }
+            return bfsCount(target, words, queue, checked, ++count);
+    }
+    private void setChangedQueue(String[] words, Queue<String> queue, boolean[] checked, String nextChangeWord) {
+        for (int j = 0; j < words.length; j++) {
+            if (!checked[j] && isValidChange(nextChangeWord, words[j], checked, j)) queue.offer(words[j]);
         }
-        return changed[i];
+    }
+    private boolean isValidChange(String nextChangeWord, String words, boolean[] checked, int j) {
+        int subCount = 0;
+        for (int k = 0; k < nextChangeWord.length(); k++) {
+            if (words.charAt(k) != nextChangeWord.charAt(k)) subCount++;
+        }
+        return checked[j] = subCount <= 1;
     }
 
     public static void main(String[] args) {
-        new ChangeWord().solution("hit", "cog", new String[]{"hot", "dot", "dog", "lot", "log", "cog"});
+        System.out.println(new ChangeWord().solution2("hit", "cog", new String[]{"hot", "dot", "dog", "lot", "log", "cog"}));
     }
 }
