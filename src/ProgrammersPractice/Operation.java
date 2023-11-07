@@ -9,7 +9,6 @@ public class Operation {
         PriorityQueue<Integer> minQueue = new PriorityQueue<>(Collections.reverseOrder());
   /*      Deque<Integer> dq = new ArrayDeque<>();
         dq.remove(dq.stream().mapToInt(Integer::intValue).min().getAsInt());*/
-
         for (String o : operations){
             if (o.charAt(0) == 'I') {
                 maxQueue.offer(Integer.parseInt(o.substring(2)));
