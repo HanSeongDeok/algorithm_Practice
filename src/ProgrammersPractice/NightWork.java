@@ -23,4 +23,16 @@ public class NightWork {
                 .mapToLong(value -> (long) value * value)
                 .sum();
     }
+
+    public long solution2(int n, int[] works) {
+        Arrays.sort(works);
+        while (works[works.length-1] != 0 && n != 0){
+            works[works.length-1] -= 1;
+            Arrays.sort(works);
+            n--;
+        }
+        return Arrays.stream(works)
+                .mapToLong(value -> (long) value * value)
+                .sum();
+    }
 }

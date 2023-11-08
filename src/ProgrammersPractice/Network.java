@@ -40,4 +40,34 @@ public class Network {
         }
         return ++answer;
     }
+
+    public int solution3(int n, int[][] computers) {
+        boolean[] checked = new boolean[n];
+        int count = 0;
+        for (int i=0; i<n; i++) {
+            if (!checked[i]) {
+                count = dfsCheck2(i, computers, checked, count);
+            }
+        }
+        return count;
+    }
+    private int dfsCheck2(int i, int[][] computers, boolean[] checked, int count) {
+        checked[i] = true;
+        for (int j = 0; j < computers.length; j++) {
+            if (!checked[j] && computers[i][j] == 1) dfsCheck2(j, computers, checked, count);
+        }
+        return ++count;
+    }
+    private int dfsCheckStack2(int i, int[][] computers, boolean[] checked, int count){
+        Stack<Integer> stack = new Stack<>();
+        stack.push(i);
+        while (!stack.isEmpty()) {
+            int index = stack.pop();
+            checked[index] = true;
+            for (int j = 0; j < computers.length; j++) {
+                if (!checked[j] && computers[index][j] == 1) stack.push(j);
+            }
+        }
+        return ++count;
+    }
 }
