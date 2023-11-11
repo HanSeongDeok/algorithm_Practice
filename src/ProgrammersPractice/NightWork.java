@@ -25,14 +25,21 @@ public class NightWork {
     }
 
     public long solution2(int n, int[] works) {
-        Arrays.sort(works);
-        while (works[works.length-1] != 0 && n != 0){
-            works[works.length-1] -= 1;
-            Arrays.sort(works);
+        while (n != 0){
+            int maxIndex = findMaxIndex(works);
+            if (works[maxIndex] <= 0) break;
+            works[maxIndex] -= 1;
             n--;
         }
         return Arrays.stream(works)
                 .mapToLong(value -> (long) value * value)
                 .sum();
+    }
+    private int findMaxIndex(int[] works) {
+        int maxIndex = 0;
+        for (int i=0; i < works.length; i++) {
+            if (works[i] > works[maxIndex]) maxIndex = i;
+        }
+        return maxIndex;
     }
 }
