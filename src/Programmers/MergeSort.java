@@ -14,7 +14,7 @@ public class MergeSort {
             int middle = (endIndex + startIndex) / 2;
             // left
             mergeSort(arr, startIndex, middle);
-            //right
+            // right
             mergeSort(arr, middle+1, endIndex);
             // merge
             merge(arr, startIndex, middle, endIndex);
@@ -26,21 +26,17 @@ public class MergeSort {
         int leftStart = startIndex;
         int rightStart = middle + 1;
         int tempIndex = 0;
-
         while (leftStart <= middle && rightStart <= endIndex) {
             if (arr[leftStart] >= arr[rightStart]) temp[tempIndex] = arr[rightStart++];
             else if (arr[leftStart] < arr[rightStart]) temp[tempIndex] = arr[leftStart++];
             tempIndex++;
         }
-
         while (leftStart <= middle) {
             temp[tempIndex++] = arr[leftStart++];
         }
-
         while (rightStart <= endIndex) {
             temp[tempIndex++] = arr[rightStart++];
         }
-
         for (int i=0; i < temp.length; i++) {
             arr[startIndex + i] = temp[i];
         }

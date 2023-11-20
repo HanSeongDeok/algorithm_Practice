@@ -18,8 +18,12 @@ public class NumberGame {
                 .collect(Collectors.toList());
 
         int count = 0;
+        int j = 0;
         for (int i = 0; i < A.length; i++) {
-            if (b.get(i) > a.get(i)) count += 1;
+            if (b.get(j) > a.get(i)) {
+                count++;
+                j++;
+            }
         }
         return count;
     }
