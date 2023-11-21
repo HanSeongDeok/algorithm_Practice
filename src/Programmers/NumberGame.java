@@ -6,6 +6,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class NumberGame {
+    public static void main(String[] args) {
+        new NumberGame().solution2(new int[]{5,1,3,7}, new int[]{2,2,6,8});
+    }
     public int solution(int[] A, int[] B) {
         List<Integer> a = Arrays.stream(A)
                 .boxed()
@@ -28,17 +31,11 @@ public class NumberGame {
         return count;
     }
     public int solution2(int[] A, int[] B) {
-        Arrays.sort(A);
-        Arrays.sort(B);
-        int count = 0;
-        int bIndex = B.length - 1;
-        for (int a : A) {
-            while (bIndex >= 0 && B[bIndex] <= a) {
-                bIndex--;
-            }
-            if (bIndex >= 0) {
-                count++;
-                bIndex--;
+        Arrays.sort(A); Arrays.sort(B);
+        int count = 0, bIndex = B.length - 1;
+        for (int i=bIndex; i>=0; i--) {
+            if (B[bIndex] > A[i]) {
+                count++; bIndex--;
             }
         }
         return count;
