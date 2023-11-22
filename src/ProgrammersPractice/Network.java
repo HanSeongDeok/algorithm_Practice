@@ -70,4 +70,21 @@ public class Network {
         }
         return ++count;
     }
+
+    public int solution4(int n, int[][] computers) {
+        boolean[] checked = new boolean[computers.length];
+        int count = 0;
+        for (int i=0; i<computers.length; i++) {
+            if (!checked[i]) count = dfsCheck3(checked, computers, i, count);
+        }
+        return count;
+    }
+
+    private int dfsCheck3(boolean[] checked, int[][] computers, int i, int count) {
+        checked[i] = true;
+        for (int k = 0; k < computers.length; k++) {
+            if (!checked[k] && computers[i][k] == 1) count = dfsCheck3(checked, computers, k, count);
+        }
+        return ++count;
+    }
 }

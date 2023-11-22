@@ -27,7 +27,7 @@ public class NightWork {
     public long solution2(int n, int[] works) {
         while (n != 0){
             int maxIndex = findMaxIndex(works);
-            if (works[maxIndex] <= 0) break;
+            if (works[maxIndex] == 0) return 0;
             works[maxIndex] -= 1;
             n--;
         }
@@ -41,5 +41,40 @@ public class NightWork {
             if (works[i] > works[maxIndex]) maxIndex = i;
         }
         return maxIndex;
+    }
+
+    public long solution3(int n, int[] works) {
+        Arrays.sort(works);
+        while (n != 0) {
+            int index = invokeMaxIndex(works);
+            if (works[index] == 0) return 0;
+            works[index]--; n--;
+        }
+        int count = 0;
+        for (int w : works) {
+            count += w * w;
+        }
+        return count;
+    }
+
+    private int invokeMaxIndex(int[] works) {
+        int maxIndex = 0, maxValue = 0;
+        for (int i = works.length-1; i>=0; i--) {
+            maxValue = Math.max(maxValue, works[i]);
+            if (maxValue == works[i]) maxIndex = i;
+        }
+        return maxIndex;
+    }
+
+    private int invokeMaxIndex2(int[] works) {
+        int maxIndex = 0;
+        for (int i = works.length-1; i>=0; i--) {
+            if (works[i] > works[maxIndex]) maxIndex = i;
+        }
+        return maxIndex;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new NightWork().solution3(4, new int[]{4,3,3}));
     }
 }
