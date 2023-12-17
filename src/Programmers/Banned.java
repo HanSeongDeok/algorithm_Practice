@@ -9,6 +9,7 @@ public class Banned {
         set = bannedDfs(set, user_id, banned_id, 0, new HashSet<>());
         return set.size();
     }
+    //TODO 복습
     private Set<Set<String>> bannedDfs(Set<Set<String>> setResult, String[] userIds, String[] bannedIds, int depth, Set<String> set) {
         boolean check = true;
         if (bannedIds.length == depth) {
