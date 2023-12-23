@@ -13,7 +13,8 @@ public class Banned {
     private Set<Set<String>> bannedDfs(Set<Set<String>> setResult, String[] userIds, String[] bannedIds, int depth, Set<String> set) {
         boolean check = true;
         if (bannedIds.length == depth) {
-            setResult.add(set); return setResult;
+            setResult.add(set);
+            return setResult;
         }
 
         for (int i=0; i < userIds.length; i++) {
