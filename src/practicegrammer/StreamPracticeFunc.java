@@ -1,4 +1,4 @@
-package practice;
+package practicegrammer;
 
 import java.util.Queue;
 
