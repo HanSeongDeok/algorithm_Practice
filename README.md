@@ -1,2 +1,2 @@
 # algorithm_Practice
-Daily Algorithm Practice Repository at least two question solving 
+Daily Algorithm study Repository at least two question solving 
