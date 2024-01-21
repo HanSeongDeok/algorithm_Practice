@@ -21,7 +21,7 @@ public class ParenthesisStringForBj {
             else if (c == ')') count--;
             else if (c == '(') count ++;
         }
-        bw.write(String.valueOf(count == 0));
+        bw.write(count == 0 ? "YES" : "NO");
 
         br.close();
         bw.flush();
